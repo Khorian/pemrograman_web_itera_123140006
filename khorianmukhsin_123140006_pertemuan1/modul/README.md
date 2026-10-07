@@ -4,8 +4,6 @@ Nama: Khorian Mukhsin
 NIM: 123140006
 Kelas praktikum: RB
 
-Seluruh enam latihan berada dalam satu aplikasi, satu halaman, dan satu folder. Tema gelap berlaku untuk semua fitur.
-
 ## Struktur
 
 ```text
