@@ -71,17 +71,17 @@ Checklist di atas menunjukkan fitur yang sudah diimplementasikan. Fitur kalkulat
 
 Tampilan awal menunjukkan form input barang, tabel keranjang kosong, dan ringkasan pembayaran.
 
-(screenshots/01-tampilan-awal.png)
+![Tampilan Form Input Utama](screenshots/01-tampilan-awal.png)
 
 ### 2. Tampilan Validasi Error
 
 Klik tombol **Tambah ke Keranjang** saat form kosong. Pesan merah akan muncul di bawah harga dan jumlah.
 
-!(screenshots/02-validasi-error.png)
+![Tampilan Validasi Error](screenshots/02-validasi-error.png)
 
 ### 3. Hasil Perhitungan dan Tabel Keranjang
 
-(screenshots/03-transaksi-dan-kembalian.png)
+![Hasil Perhitungan dan Tabel Keranjang](screenshots/03-transaksi-dan-kembalian.png)
 
 ## Penjelasan Teknis
 
