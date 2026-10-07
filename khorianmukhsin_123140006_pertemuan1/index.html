@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kopi Kita | Aplikasi Kasir</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">COFFEE SHOP · APLIKASI KASIR</p>
+    <h1 class="brand-title">KOPI KITA<span>.</span></h1>
+    <p>Secangkir kopi, cerita hari ini.</p>
+  </header>
+
+  <main class="app-layout">
+    <section class="card input-section" aria-labelledby="input-title">
+      <h2 id="input-title">Tambah Menu</h2>
+      <p>Pilih menu dan masukkan jumlah pesanan pelanggan.</p>
+
+      <!-- Validasi ditangani JavaScript agar pesan muncul di bawah input. -->
+      <form id="barang-form" novalidate>
+        <div class="form-group">
+          <label for="nama-barang">Nama Menu</label>
+          <input
+            id="nama-barang"
+            name="namaBarang"
+            type="text"
+            list="pilihan-menu"
+            placeholder="Pilih atau ketik nama menu"
+            required
+            minlength="3"
+            aria-describedby="nama-error"
+          >
+
+          <datalist id="pilihan-menu">
+            <option value="Espresso"></option>
+            <option value="Americano"></option>
+            <option value="Cappuccino"></option>
+            <option value="Cafe Latte"></option>
+            <option value="Kopi Susu Gula Aren"></option>
+            <option value="Caramel Latte"></option>
+            <option value="Matcha Latte"></option>
+            <option value="Chocolate"></option>
+            <option value="Croissant"></option>
+            <option value="French Fries"></option>
+          </datalist>
+
+          <p id="nama-error" class="error-message" aria-live="polite"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="harga-barang">Harga Satuan (Rp)</label>
+          <input
+            id="harga-barang"
+            name="hargaBarang"
+            type="number"
+            placeholder="Contoh: 18000"
+            required
+            min="500"
+            step="1"
+            aria-describedby="harga-error"
+          >
+          <p id="harga-error" class="error-message" aria-live="polite"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="jumlah-barang">Jumlah / Qty</label>
+          <input
+            id="jumlah-barang"
+            name="jumlahBarang"
+            type="number"
+            placeholder="Contoh: 2"
+            required
+            min="1"
+            step="1"
+            aria-describedby="jumlah-error"
+          >
+          <p id="jumlah-error" class="error-message" aria-live="polite"></p>
+        </div>
+
+        <button type="submit" class="button button-primary">
+          Tambah ke Pesanan
+        </button>
+      </form>
+
+      <p id="status-pesan" class="status-message" role="status"></p>
+    </section>
+
+    <section class="card cart-section" aria-labelledby="cart-title">
+      <div class="section-heading">
+        <h2 id="cart-title">Daftar Pesanan</h2>
+        <button
+          id="reset-transaksi"
+          type="button"
+          class="button button-secondary"
+        >
+          Transaksi Baru / Reset
+        </button>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <caption>Menu yang dipesan dalam transaksi saat ini</caption>
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Nama Menu</th>
+              <th scope="col">Harga Satuan</th>
+              <th scope="col">Qty</th>
+              <th scope="col">Subtotal</th>
+              <th scope="col">Aksi</th>
+            </tr>
+          </thead>
+
+          <!-- Baris pesanan dan tombol Hapus dibuat oleh JavaScript. -->
+          <tbody id="keranjang-body">
+            <tr class="empty-row">
+              <td colspan="6">
+                Belum ada pesanan. Tambahkan menu terlebih dahulu.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p id="storage-pesan" class="error-message" role="status"></p>
+    </section>
+
+    <section class="card payment-section" aria-labelledby="payment-title">
+      <h2 id="payment-title">Ringkasan Pembayaran</h2>
+      <p class="discount-info">
+        Diskon otomatis 10% untuk total pesanan minimal Rp50.000.
+      </p>
+
+      <dl class="payment-summary">
+        <div>
+          <dt>Total Pesanan</dt>
+          <dd id="total-belanja">Rp0</dd>
+        </div>
+        <div>
+          <dt>Diskon (10%)</dt>
+          <dd id="nominal-diskon">Rp0</dd>
+        </div>
+        <div class="grand-total">
+          <dt>Total Akhir</dt>
+          <dd id="total-akhir">Rp0</dd>
+        </div>
+      </dl>
+
+      <div class="form-group">
+        <label for="uang-bayar">Uang Bayar (Rp)</label>
+        <input
+          id="uang-bayar"
+          type="number"
+          min="0"
+          step="1"
+          placeholder="Masukkan uang yang diterima"
+          aria-describedby="bayar-pesan"
+        >
+        <p id="bayar-pesan" class="payment-message" aria-live="polite"></p>
+      </div>
+
+      <div class="change-summary">
+        <span>Kembalian</span>
+        <output id="kembalian" for="uang-bayar">Rp0</output>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Khorian Mukhsin · 123140006 · Praktikum Pemrograman Web ITERA
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Dashboard Praktikum Web</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
+<body>
+<header class="header"><div><p class="eyebrow">PRAKTIKUM PEMROGRAMAN WEB</p><h1>Dashboard Latihan</h1><p>Data mahasiswa, post API, dan tugas harian dalam satu aplikasi.</p></div><div><button id="theme-toggle" type="button" aria-pressed="false">Aktifkan Dark Mode</button><p id="theme-status" role="status"></p><p id="storage-error" class="error" role="status"></p></div></header>
+<nav class="navigation" aria-label="Navigasi fitur"><a href="#mhs-section">Data Mahasiswa</a><a href="#post-section">Post API</a><a href="#todo-section">Todo List</a></nav>
+<main class="dashboard"><section class="panel mhs-panel" id="mhs-section">
+    <h2>Data Mahasiswa</h2>
+    <p>Latihan validasi form dan penyimpanan localStorage.</p>
+    <form id="mhs-mahasiswa-form" novalidate>
+      <label for="mhs-nama">Nama lengkap</label>
+      <input id="mhs-nama" type="text" required minlength="3" aria-describedby="mhs-nama-error">
+      <p id="mhs-nama-error" class="error" aria-live="polite"></p>
+      <label for="mhs-nim">NIM</label>
+      <input id="mhs-nim" type="text" inputmode="numeric" required pattern="[0-9]{9}" aria-describedby="mhs-nim-error">
+      <p id="mhs-nim-error" class="error" aria-live="polite"></p>
+      <label for="mhs-email">Email</label>
+      <input id="mhs-email" type="email" required aria-describedby="mhs-email-error">
+      <p id="mhs-email-error" class="error" aria-live="polite"></p>
+      <label for="mhs-prodi">Program studi</label>
+      <select id="mhs-prodi" required aria-describedby="mhs-prodi-error">
+        <option value="">Pilih program studi</option>
+        <option>Teknik Informatika</option>
+        <option>Sistem Informasi</option>
+        <option>Teknik Elektro</option>
+        <option>Teknik Industri</option>
+      </select>
+      <p id="mhs-prodi-error" class="error" aria-live="polite"></p>
+      <button type="submit">Tambah Mahasiswa</button>
+    </form>
+    <p id="mhs-status" role="status"></p>
+    <p id="mhs-storage-error" class="error" role="status"></p>
+    <h2>Daftar Mahasiswa</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th scope="col">No</th><th scope="col">Nama</th><th scope="col">NIM</th><th scope="col">Email</th><th scope="col">Prodi</th></tr></thead>
+        <tbody id="mhs-daftar-mahasiswa"></tbody>
+      </table>
+    </div>
+  </section><section class="panel post-panel" id="post-section"><h2>Post API</h2><p>Latihan fetch, pencarian judul, dan pagination. Lima post per halaman.</p>
+<label for="post-search">Cari berdasarkan title</label><input id="post-search" type="search" placeholder="Ketik judul post" disabled>
+<p id="post-status" role="status">Memuat data...</p><button id="post-retry" type="button" hidden>Coba Lagi</button>
+<section id="post-posts" aria-label="Daftar post" aria-busy="true"></section>
+<nav class="actions" aria-label="Pagination"><button id="post-previous" type="button" disabled>Previous</button><span id="post-page-info" role="status"></span><button id="post-next" type="button" disabled>Next</button></nav></section><section class="panel todo-panel" id="todo-section"><h2>Todo List</h2><p>Tambahkan tugas, tandai selesai, atau hapus tugas.</p><form id="todo-todo-form" novalidate><label for="todo-todo-input">Tugas baru</label><input id="todo-todo-input" type="text" required placeholder="Contoh: Mengerjakan praktikum" aria-describedby="todo-input-error"><p id="todo-input-error" class="error" aria-live="polite"></p><div class="actions"><button type="submit">Tambah</button></div></form><p id="todo-status" role="status"></p><p id="todo-storage-error" class="error" role="status"></p><p id="todo-summary"></p><div id="todo-todo-list" role="list" aria-label="Daftar tugas"></div></section></main><footer>Khorian Mukhsin · 123140006 · Latihan Modul</footer></body></html>
