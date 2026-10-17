@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183c34">
+  <title>Ruang Fokus — Personal Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#">◈ <span>ruang fokus<span class="brand-sub">PERSONAL DASHBOARD</span></span></a>
+    <p class="nav-label">RUANG KERJAKU</p>
+    <a class="nav-active" href="#workspace">▦ &nbsp; Dashboard</a>
+    <div class="sidebar-bottom"><span class="avatar">KM</span><div>Khorian Mukhsin<small>Teknik Informatika · ITERA</small></div></div>
+  </aside>
+  <main id="workspace">
+    <header><span>Dashboard / <strong>Ringkasan</strong></span><button id="theme" class="quiet" type="button" aria-label="Ubah tema">◐ Tema</button></header>
+    <section class="welcome"><div><p class="eyebrow">SEDIKIT DEMI SEDIKIT, TETAP MAJU</p><h1>Ruang untuk fokus.</h1><p>Atur tugas, kuliah, dan ide dalam satu tempat.</p></div><div class="clock"><strong id="clock">--:--</strong><span id="today"></span><small>Waktu Indonesia Barat</small></div></section>
+    <section class="stats" aria-label="Ringkasan produktivitas"><article><span>Tugas aktif</span><strong id="active">0</strong><small>Langkah berikutnya menantimu</small></article><article><span>Tugas selesai</span><strong id="done">0</strong><small>Setiap progres berarti</small></article><article><span>Jadwal kuliah</span><strong id="schedule-count">0</strong><small>Agenda yang sudah tercatat</small></article><article class="weather"><div><span>Cuaca ITERA</span><button id="refresh" class="quiet" aria-label="Muat ulang cuaca">↻</button></div><strong id="temperature">—</strong><small id="weather-status" role="status">Memuat cuaca…</small></article></section>
+    <section class="panel"><div class="panel-heading"><div><p class="eyebrow">RENCANA HARI INI, PROGRES ESOK HARI</p><h2>Kelola aktivitasmu</h2></div><button id="add" class="primary" type="button">+ Tambah informasi</button></div>
+      <div class="toolbar"><div class="tabs" role="group" aria-label="Jenis informasi"><button class="selected" data-kind="task" aria-pressed="true">Tugas</button><button data-kind="schedule" aria-pressed="false">Jadwal kuliah</button><button data-kind="note" aria-pressed="false">Catatan</button></div><input id="search" type="search" placeholder="Cari judul atau detail…" aria-label="Cari informasi"><select id="filter" aria-label="Filter status tugas"><option value="all">Semua status</option><option value="active">Belum selesai</option><option value="done">Selesai</option></select></div>
+      <div id="items" class="items"></div>
+      <footer><span id="result-count"></span><span>Disimpan di browser ini</span></footer>
+    </section>
+    <p id="message" role="status" class="message"></p>
+    <p class="closing">Cuaca oleh <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></p>
+    <p class="closing">Satu tempat untuk pikiran yang lebih teratur. <span>✦</span></p>
+  </main>
+  <dialog id="editor"><form id="item-form"><div class="dialog-heading"><h2 id="form-title">Tambah informasi</h2><button id="close" type="button" class="quiet" aria-label="Tutup form">✕</button></div><input name="id" type="hidden"><label>Jenis informasi<select name="kind"><option value="task">Tugas</option><option value="schedule">Jadwal kuliah</option><option value="note">Catatan</option></select></label><label>Judul<input name="title" required maxlength="100" placeholder="Contoh: Revisi proposal TA"></label><label>Detail<textarea name="details" rows="3" maxlength="1000" placeholder="Mata kuliah, ruang, atau ide penting…"></textarea></label><div class="form-grid"><label>Tanggal <span>(opsional)</span><input name="date" type="date"></label><label>Waktu <span>(opsional)</span><input name="time" type="time"></label></div><label>Prioritas<select name="priority"><option value="normal">Normal</option><option value="high">Tinggi</option></select></label><p class="hint">Jadwal dicatat sebagai agenda bertanggal, bukan jadwal berulang.</p><button class="primary" type="submit">Simpan informasi</button></form></dialog>
+  <dialog id="delete-dialog"><h2>Hapus informasi?</h2><p id="delete-title"></p><p>Informasi yang dihapus tidak dapat dikembalikan.</p><div class="actions"><button id="cancel-delete">Batal</button><button id="confirm-delete" class="danger">Hapus</button></div></dialog>
+</body>
+</html>

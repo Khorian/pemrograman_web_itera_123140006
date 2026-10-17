@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latihan Operasi Asinkron</title>
+<link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body>
+<main>
+<header><p class="eyebrow">PRAKTIKUM JAVASCRIPT</p><h1>Jelajah Postingan</h1><p>Latihan fetch multi-endpoint, retry, loading, error handling, pagination, dan debounce.</p></header>
+<section class="panel" aria-label="Pencarian postingan">
+<label for="search">Cari postingan</label>
+<div class="search-row"><input id="search" type="search" placeholder="Contoh: love, life, history" autocomplete="off"><button id="reload" type="button">Muat ulang</button></div>
+<p class="hint">Pencarian otomatis setelah berhenti mengetik selama 500 ms.</p>
+<div class="sources">Sumber: DummyJSON · Postingan + data pengguna</div>
+<p id="status" role="status" aria-live="polite"></p>
+<div id="loading" hidden><span class="spinner" aria-hidden="true"></span> Mengambil data…</div>
+<div id="error" class="error" role="alert" hidden><h2>Data belum dapat ditampilkan</h2><p id="error-message"></p><button id="retry" type="button">Coba lagi</button></div>
+<div id="results" aria-busy="false"></div>
+<nav class="pagination" aria-label="Halaman postingan"><button id="previous" type="button" disabled>← Previous</button><span id="page">Halaman 1</span><button id="next" type="button" disabled>Next →</button></nav>
+</section>
+<footer>HTML · CSS · JavaScript ES6+ · Async/Await</footer>
+</main>
+</body></html>
