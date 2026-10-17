@@ -52,9 +52,9 @@ Jadwal berupa agenda bertanggal, bukan jadwal mingguan berulang. Waktu aplikasi 
 - Nilai pengguna di-escape sebelum rendering HTML.
 
 ## 7. Screenshot antarmuka
-   ```markdown
+   
    ![Screenshot antarmuka Ruang Fokus](assets/screenshot-dashboard.png)
-   ```
+  
 
 Tidak disertakan gambar ilustrasi yang diklaim sebagai screenshot aplikasi.
 
