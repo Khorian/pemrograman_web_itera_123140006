@@ -56,8 +56,6 @@ Jadwal berupa agenda bertanggal, bukan jadwal mingguan berulang. Waktu aplikasi 
    ![Screenshot antarmuka Ruang Fokus](assets/screenshot-dashboard.png)
   
 
-Tidak disertakan gambar ilustrasi yang diklaim sebagai screenshot aplikasi.
-
 ## 8. Implementasi ES6+ dan lokasi kode
 
 | Fitur | File dan baris | Penerapan |
