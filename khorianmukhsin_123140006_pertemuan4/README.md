@@ -3,6 +3,7 @@
 ## Identitas Mahasiswa
 - **Nama:** Khorian Mukhsin
 - **NIM:** 123140006
+- **Kelas** RB
 - **Program Studi:** Teknik Informatika
 
 ## Deskripsi Program
