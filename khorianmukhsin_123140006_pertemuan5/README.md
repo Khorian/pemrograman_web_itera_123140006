@@ -74,9 +74,9 @@ python latihan/01_everything_is_object.py
 ## Screenshot Output
 Folder `screenshots/` disediakan untuk menaruh screenshot hasil eksekusi program.
 
-![Hasil eksekusi ke 1](screenshots/hasil eksekusi-1.png)
+![Hasil eksekusi ke 1](screenshots/hasil-eksekusi-1.png)
 
-![Hasil eksekusi ke 2](screenshots/hasil eksekusi-2.png)
+![Hasil eksekusi ke 2](screenshots/hasil-eksekusi-2.png)
 
 ## Catatan Pengujian
 Program utama menggunakan data contoh tetap dan tidak meminta input manual. Data hanya disimpan selama program berjalan; belum menggunakan database atau penyimpanan permanen.
