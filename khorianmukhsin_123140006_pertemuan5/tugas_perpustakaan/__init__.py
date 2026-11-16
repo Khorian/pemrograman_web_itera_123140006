@@ -1,0 +1,1 @@
+"""Paket sistem manajemen perpustakaan."""
