@@ -1,0 +1,5 @@
+[console_scripts]
+initialize_pyramid_db = pyramid_mahasiswa.scripts.initialize_db:main
+
+[paste.app_factory]
+main = pyramid_mahasiswa:main

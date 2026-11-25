@@ -1,0 +1,1 @@
+Alembic migration scripts for this Pyramid application. Use `alembic -c development.ini upgrade head` from project root.

@@ -1,0 +1,55 @@
+@base = http://localhost:6543
+
+### Home
+GET {{base}}/
+
+### Mahasiswa - list
+GET {{base}}/api/mahasiswa
+
+### Mahasiswa - detail
+GET {{base}}/api/mahasiswa/1
+
+### Mahasiswa - create
+POST {{base}}/api/mahasiswa
+Content-Type: application/json
+
+{"nim":"99901","nama":"Praktikan Uji","jurusan":"Teknik Informatika","tanggal_lahir":"2003-01-01","alamat":"Lampung"}
+
+### Mahasiswa - update
+PUT {{base}}/api/mahasiswa/1
+Content-Type: application/json
+
+{"jurusan":"Teknik Informatika"}
+
+### Mahasiswa - delete
+DELETE {{base}}/api/mahasiswa/99901
+
+### Matakuliah - list
+GET {{base}}/api/matakuliah
+
+### Matakuliah - detail
+GET {{base}}/api/matakuliah/1
+
+### Matakuliah - create
+POST {{base}}/api/matakuliah
+Content-Type: application/json
+
+{"kode_mk":"IF9999","nama_mk":"Uji API","sks":3,"semester":5}
+
+### Matakuliah - update
+PUT {{base}}/api/matakuliah/1
+Content-Type: application/json
+
+{"sks":4}
+
+### Matakuliah - delete
+DELETE {{base}}/api/matakuliah/999
+
+### Matakuliah - invalid required fields (expect 400)
+POST {{base}}/api/matakuliah
+Content-Type: application/json
+
+{"kode_mk":"IF8888"}
+
+### Matakuliah - missing ID (expect 404)
+GET {{base}}/api/matakuliah/99999
